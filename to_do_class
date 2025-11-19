@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+public class doThis {
+	ArrayList <String> toDo = new ArrayList <String> ();
+    ArrayList <String> isCompleted = new ArrayList <String> ();
+
+
+    public void addTask(String set)
+    {
+        toDo.add(set);
+    }
+    
+    public void markCompleted(String task, Boolean c)
+    {
+        for(int i = 0; i<toDo.size(); i++)
+        {
+            if (toDo.get(i).equals(task))
+            {
+                isCompleted.add(toDo.get(i));
+                toDo.remove(toDo.get(i));
+                i--;
+
+            }
+        }
+    }
+}
